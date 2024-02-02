@@ -5,7 +5,7 @@ import BillInput from "./BillInput";
 import { useState } from "react";
 
 export default function TipCalculator() {
-  const [bill, setBill] = useState(0);
+  const [bill, setBill] = useState("");
   const [percent1, setPercent1] = useState(0);
   const [percent2, setPercent2] = useState(0);
 
@@ -26,8 +26,12 @@ export default function TipCalculator() {
       <SelectPercentage percent={percent2} onSelect={setPercent2}>
         How did your friend like the service?
       </SelectPercentage>
-      <OutPut bill={bill} tip={tip} />
-      <Reset onReset={handleReset} />
+      {bill > 0 && (
+        <>
+          <OutPut bill={bill} tip={tip} />
+          <Reset onReset={handleReset} />
+        </>
+      )}
     </div>
   );
 }
