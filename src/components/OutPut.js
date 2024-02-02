@@ -1,7 +1,7 @@
-export default function OutPut() {
+export default function OutPut({ bill }) {
   return (
     <div>
-      <em>You pay ($ + $ tip)</em>
+      <h3>You pay (${bill} + $ tip)</h3>
     </div>
   );
 }
