@@ -1,5 +1,5 @@
-import "./App.css";
-import TipCalculator from "./components/TipCalculator";
+import "../App.css";
+import TipCalculator from "./TipCalculator";
 
 export default function App() {
   return (
